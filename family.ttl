@@ -2,8 +2,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix     : <http://example.org/> .
 
+# axioms for Father
 :Dad rdfs:subClassOf :Father .
 :Father rdfs:subClassOf :Dad .
 :Father rdfs:subClassOf :Person .
 :hasFather rdfs:domain :Person .
 :hasFather rdfs:range :Father .
+
+# axioms for Mother
+:Mom rdfs:subClassOf :Mother .
+:Mother rdfs:subClassOf :Mom .
+:Mother rdfs:subClassOf :Person .
+:hasMother rdfs:domain :Person .
+:hasMother rdfs:range :Mother .
