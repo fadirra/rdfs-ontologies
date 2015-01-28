@@ -5,13 +5,17 @@
 # axioms for Father
 :Dad rdfs:subClassOf :Father .
 :Father rdfs:subClassOf :Dad .
-:Father rdfs:subClassOf :Person .
-:hasFather rdfs:domain :Person .
+:hasFather rdfs:domain :Child .
 :hasFather rdfs:range :Father .
 
 # axioms for Mother
 :Mom rdfs:subClassOf :Mother .
 :Mother rdfs:subClassOf :Mom .
-:Mother rdfs:subClassOf :Person .
-:hasMother rdfs:domain :Person .
+:hasMother rdfs:domain :Child .
 :hasMother rdfs:range :Mother .
+
+# axioms for Parent
+:Father rdfs:subClassOf :Parent .
+:Mother rdfs:subClassOf :Parent .
+:Parent rdfs:subClassOf :Person .
+:Child rdfs:subClassOf :Person .
