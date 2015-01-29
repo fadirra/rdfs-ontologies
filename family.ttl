@@ -19,3 +19,5 @@
 :Mother rdfs:subClassOf :Parent .
 :Parent rdfs:subClassOf :Person .
 :Child rdfs:subClassOf :Person .
+:hasFather rdfs:subPropertyOf :hasParent .
+:hasMother rdfs:subPropertyOf :hasParent .
