@@ -23,3 +23,15 @@
 :hasParent rdfs:range :Parent .
 :hasFather rdfs:subPropertyOf :hasParent .
 :hasMother rdfs:subPropertyOf :hasParent .
+
+# axioms for Son
+:Son rdfs:subClassOf :Child .
+:hasSon rdfs:domain :Parent .
+:hasSon rdfs:range :Son .
+:hasSon rdfs:subPropertyOf :hasChild .
+
+# axioms for Daughter
+:Daughter rdfs:subClassOf :Child .
+:hasDaughter rdfs:domain :Parent .
+:hasDaughter rdfs:range :Daughter .
+:hasDaughter rdfs:subPropertyOf :hasChild .
