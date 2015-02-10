@@ -5,33 +5,57 @@
 # axioms for Father
 :Dad rdfs:subClassOf :Father .
 :Father rdfs:subClassOf :Dad .
+
 :hasFather rdfs:domain :Child .
 :hasFather rdfs:range :Father .
+
+:fatherOf rdfs:domain :Father .
+:fatherOf rdfs:range :Child .
 
 # axioms for Mother
 :Mom rdfs:subClassOf :Mother .
 :Mother rdfs:subClassOf :Mom .
+
 :hasMother rdfs:domain :Child .
 :hasMother rdfs:range :Mother .
+
+:motherOf rdfs:domain :Mother .
+:motherOf rdfs:range :Child .
 
 # axioms for Parent
 :Father rdfs:subClassOf :Parent .
 :Mother rdfs:subClassOf :Parent .
 :Parent rdfs:subClassOf :Person .
 :Child rdfs:subClassOf :Person .
+
 :hasParent rdfs:domain :Child .
 :hasParent rdfs:range :Parent .
 :hasFather rdfs:subPropertyOf :hasParent .
 :hasMother rdfs:subPropertyOf :hasParent .
 
+:parentOf rdfs:domain :Parent .
+:parentOf rdfs:range :Child .
+:fatherOf rdfs:subPropertyOf :parentOf .
+:motherOf rdfs:subPropertyOf :parentOf .
+
 # axioms for Son
 :Son rdfs:subClassOf :Child .
+
 :hasSon rdfs:domain :Parent .
 :hasSon rdfs:range :Son .
 :hasSon rdfs:subPropertyOf :hasChild .
 
+:sonOf rdfs:domain :Son .
+:sonOf rdfs:range :Parent .
+:sonOf rdfs:subPropertyOf :childOf .
+
 # axioms for Daughter
 :Daughter rdfs:subClassOf :Child .
+
 :hasDaughter rdfs:domain :Parent .
 :hasDaughter rdfs:range :Daughter .
 :hasDaughter rdfs:subPropertyOf :hasChild .
+
+:daughterOf rdfs:domain :Daughter .
+:daughterOf rdfs:range :Parent .
+:daughterOf rdfs:subPropertyOf :childOf .
