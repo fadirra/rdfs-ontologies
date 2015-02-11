@@ -2,16 +2,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix     : <http://example.org/> .
 
-:Museum rdfs:subClassOf :TourismAttraction .
+# specializations of museums
 :ArtMuseum rdfs:subClassOf :Museum .
 :ModernArtMuseum rdfs:subClassOf :ArtMuseum .
 :HistoryMuseum rdfs:subClassOf :Museum .
+
+# specializations of tourism attractions
+:Museum rdfs:subClassOf :TourismAttraction .
 :Landmark rdfs:subClassOf :TourismAttraction .
 :OutdoorSpot rdfs:subClassOf :TourismAttraction .
 :AmusementPark rdfs:subClassOf :TourismAttraction .
+
+# specializations of tourism objects
 :Restaurant rdfs:subClassOf :TourismObject .
 :Hotel rdfs:subClassOf :TourismObject .
 :TourismAttraction rdfs:subClassOf :TourismObject .
+
+# properties
 :tripAdvisorRating rdfs:domain :TourismObject .
 :tripAdvisorRating rdfs:subPropertyOf :rating .
 :star rdfs:domain :Hotel .
@@ -26,6 +33,8 @@
 :signatureDish rdfs:domain :Restaurant .
 :isMichelinStarred rdfs:domain :Restaurant .
 :numberOfRooms rdfs:domain :Hotel .
+
+# defining hotel chains
 :HotelChain rdfs:subClassOf rdfs:Container .
 :hotel a rdfs:ContainerMembershipProperty .
 :hotel rdfs:domain :HotelChain .
