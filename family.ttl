@@ -3,9 +3,12 @@
 @prefix     : <http://example.org/> .
 
 # axioms for Father
+
+## RDFS can express that two classes are the same
 :Dad rdfs:subClassOf :Father .
 :Father rdfs:subClassOf :Dad .
 
+## RDFS can express the domain and range of a property 
 :hasFather rdfs:domain :Child .
 :hasFather rdfs:range :Father .
 
@@ -30,6 +33,8 @@
 
 :hasParent rdfs:domain :Child .
 :hasParent rdfs:range :Parent .
+
+## RDFS can express subproperties
 :hasFather rdfs:subPropertyOf :hasParent .
 :hasMother rdfs:subPropertyOf :hasParent .
 
