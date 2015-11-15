@@ -5,3 +5,5 @@
 :Chicken rdfs:subClassOf :Animal. # this axiom is superfluous
 :Chicken rdfs:subClassOf :Bird.
 :Bird rdfs:subClassOf :Animal.
+
+:Turkey rdfs:subClassOf :Bird.
