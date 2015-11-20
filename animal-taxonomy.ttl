@@ -9,3 +9,5 @@
 :Turkey rdfs:subClassOf :Bird.
 
 :Pigeon rdfs:subClassOf :Bird.
+
+:Duck rdfs:subClassOf :Bird.
